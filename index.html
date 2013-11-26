@@ -20,7 +20,7 @@
 			<td><%= firstName %></td>
 			<td><%= lastName %></td>
 			<td>
-				<a href="#" class="btn btn-sm btn-default js-show">Show</a>
+				<a href="#contacts/<%= id %>" class="btn btn-sm btn-default js-show">Show</a>
 				<button type="button" class="btn btn-sm btn-default js-delete">Delete</button>
 			</td>
 		</script>
@@ -42,16 +42,29 @@
 			<p><strong>Phone number:</strong> <%= phoneNumber %></p>
 		</script>
 
+		<!-- Missing Contact View -->
+		<script type="text/template" id="missing-contact-view">
+			<div class="alert alert-danger">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<strong>Contact Missing</strong> This contact does not exists !
+			</div>
+		</script>
+
 		<script src="./assets/js/vendor/jquery.js"></script>
 		<script src="./assets/js/vendor/json2.js"></script>
 		<script src="./assets/js/vendor/underscore.js"></script>
 		<script src="./assets/js/vendor/backbone.js"></script>
+		<script src="./assets/js/vendor/backbone.localstorage.js"></script>
 		<script src="./assets/js/vendor/backbone.marionette.js"></script>
 
 		<script src="./assets/js/app.js"></script>
+		<script src="./assets/js/apps/config/storage/localstorage.js"></script>
 		<script src="./assets/js/entities/contact.js"></script>
+
+		<script src="./assets/js/apps/contacts/contacts_app.js"></script>
 		<script src="./assets/js/apps/contacts/list/list_view.js"></script>
 		<script src="./assets/js/apps/contacts/list/list_controller.js"></script>
+		<script src="./assets/js/apps/contacts/show/show_view.js"></script>
 		<script src="./assets/js/apps/contacts/show/show_controller.js"></script>
 
 		<script type="text/javascript">
